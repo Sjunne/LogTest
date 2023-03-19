@@ -1,7 +1,4 @@
 ﻿using System.Collections.Concurrent;
-using System.Text;
-using System.Threading;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace LogComponent
 {
@@ -12,7 +9,6 @@ namespace LogComponent
         private readonly BlockingCollection<LogLine> _logQueue;
         private readonly IPersistency _persistency;
         private bool _exit = false;
-
 
         public AsyncLog(IPersistency type)
         {
@@ -41,7 +37,6 @@ namespace LogComponent
                     catch (OperationCanceledException e) {
                         //handle e
                     }
-                    Thread.Sleep(500);
                 }   
             }
         }

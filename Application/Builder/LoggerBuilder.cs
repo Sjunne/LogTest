@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LogComponent;
+﻿using LogComponent;
 using LogComponent.Persistency;
 
 namespace LogUsers.Builder
 {
-    internal class LoggerBuilder : IBuilder
+    public class LoggerBuilder : IBuilder
     {
         private IPersistency? _persistance;
    
