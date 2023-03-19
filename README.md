@@ -59,6 +59,6 @@ work without waiting for the log to be written to a file")
             });
         }
 ```
-As can be seen above, a task is created. Imaginging the possibility of rapid loggings, it is possible to add a list of items in a single thread by calling "WriteMultipleItems(List<string> items)".
+As can be seen above, a task is created. Imagining the possibility of rapid loggings, it is possible to add a list of items in a single thread by calling "WriteMultipleItems(List<string> items)".
   
 ## Unit Tests
