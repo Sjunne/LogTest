@@ -1,5 +1,7 @@
-# Log	Task
+# Log	Task (Version 2)
 **Read Task description first**
+**XUnit must be installed as changes since version 1**
+
 
 ## Architectural changes
 
