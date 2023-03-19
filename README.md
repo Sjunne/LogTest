@@ -11,3 +11,11 @@ var logger = new LoggerBuilder()
                 .LogToFile(@"C:\LogTest")
                 .Build();
 ```
+
+Currently two log-destinations are provided as a example. BuildLoggerToDB is just for showcasing, will ultimately throw "NotImplemented".
+```
+LoggerBuilder LogToFile(string fileDestination);
+LoggerBuilder BuildLoggerToDB(string connectionString);
+```
+
+        
