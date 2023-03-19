@@ -64,3 +64,11 @@ work without waiting for the log to be written to a file")
 As can be seen above, a task is created. Imagining the possibility of rapid loggings, it is possible to add a list of items in a single thread by calling "WriteMultipleItems(List<string> items)".
   
 ## Unit Tests
+
+Truth is i ran out of time for unit tests. 
+I have provided a XUnit project and the required methods for unit testing.
+Ran into issues as i have been relying on DateTime.Now. Which leaves little room for mocking times throughout the solution. 
+If i had time to remake anything i would provide a wrapper class for datetimes, which would allow for modifications and changes to the "actual" time as seen by the logger, and thus provided tests per demand. 
+
+I have provided a single "unit" test. To test the persistance it would be smarter to test a smaller unit (in this case the persistancy class). 
+But to showcase i know how to work XUnit and the Act-Arrange-
