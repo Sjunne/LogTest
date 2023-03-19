@@ -46,4 +46,19 @@ A BlockingCollectiong provides easy access to using CancellationTokens, which in
         }
 ```
 By implementing with a tokensource, it can stop withoutflush simply by calling the cancel method. Which is then checked in every iteration of the foreach loop.
- 
+Also in case of large applications, adding is restricted after calling a stop method. 
+A Blocking Queue is also thread safe and allows for thread-safe adding of items to the Queue ("so the calling application can get on with its 
+work without waiting for the log to be written to a file")
+
+```ruby
+        public void WriteSingleItem(string text)
+        {
+            Task t1 = Task.Run(() =>
+            {
+                this._logQueue.Add(new LogLine() { Text = text, Timestamp = DateTime.Now });
+            });
+        }
+```
+As can be seen above, a task is created. Imaginging the possibility of rapid loggings, it is possible to add a list of items in a single thread by calling "WriteMultipleItems(List<string> items)".
+  
+## Unit Tests
